@@ -433,6 +433,15 @@
             margin-right: 10px;
         }
 
+        .sidebar--link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sidebar--link:hover {
+            text-decoration: underline;
+        }
+
         @media print {
             body {
                 width: 100%;
@@ -499,7 +508,7 @@
                         </path>
                     </svg>
                     <span class="sidebar--label">Número de telefone</span><br>
-                    (79) 98807-5971
+                    <a href="tel:+5579988075971" class="sidebar--link">(79) 98807-5971</a>
                 </li>
 
                 <li class="sidebar--item sidebar--item-personal">
@@ -511,7 +520,7 @@
                         <path d="M0 0h24v24H0z" fill="none"></path>
                     </svg>
                     <span class="sidebar--label">Email</span><br>
-                    pedrocontact22@gmail.com
+                    <a href="mailto:pedrocontact22@gmail.com" class="sidebar--link">pedrocontact22@gmail.com</a>
                 </li>
 
                 <li class="sidebar--item sidebar--item-personal">
@@ -559,7 +568,7 @@
                         </path>
                     </svg>
                     <span class="sidebar--label">Website</span><br>
-                    https://pedrolucena.vercel.app/
+                    <a href="https://pedrolucena.vercel.app/" target="_blank" class="sidebar--link">pedrolucena.vercel.app</a>
                 </li>
             </ul>
         </div>
