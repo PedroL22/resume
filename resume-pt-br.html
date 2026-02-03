@@ -36,6 +36,30 @@
                     -moz-osx-font-smoothing: grayscale;
                 }
         }
+        /* Mobile-first: Stack layout for screens smaller than resume width */
+        @media (max-width: 800px) {
+            .wrapper {
+                max-width: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            .sidebar-bg {
+                display: none !important;
+            }
+            .sidebar {
+                position: relative !important;
+                width: 100% !important;
+                order: -1 !important;
+                background-color: #3f6592 !important;
+                padding: 1rem !important;
+            }
+            .left-section {
+                position: relative !important;
+                width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
         @media print {
             .wrapper {
                 max-width: 100% !important;
@@ -236,7 +260,7 @@
 
     </aside>
 
-    <section class="left-0 relative w-[555px] pl-5">
+    <section class="left-section left-0 relative w-[555px] pl-5">
 
         <div>
             <h1 class="tracking-[0.08em] uppercase not-italic text-[30px] m-0 pt-4 pb-1.5 px-0 font-semibold">Pedro Lucena</h1>
