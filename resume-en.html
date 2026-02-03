@@ -22,10 +22,8 @@
         }
 
         body {
-            width: 21cm;
             height: 100%;
             min-height: 29.7cm;
-            position: relative;
             margin: 0;
             padding: 0;
             color: #333333;
@@ -34,13 +32,19 @@
             font-style: normal;
         }
 
+        .wrapper {
+            max-width: 21cm;
+            margin: 0 auto;
+            position: relative;
+        }
+
         h1 {
             letter-spacing: 0.08em;
             text-transform: uppercase;
             font-style: normal;
             font-size: 30px;
             margin: 0;
-            padding: 16px 0 24px 0;
+            padding: 16px 0 6px 0;
             font-weight: 600;
         }
 
@@ -50,6 +54,15 @@
             display: inline;
             margin-right: 3px;
             padding: 0;
+        }
+
+        .section--role {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3f6592;
+            margin: 0 0 20px 0;
+            padding: 0;
+            letter-spacing: 0.02em;
         }
 
         h2 {
@@ -85,9 +98,10 @@
         }
 
         .sections {
-            left: 235px;
+            left: 0;
             position: relative;
-            width: 535px;
+            width: 555px;
+            padding-left: 20px;
         }
 
         .section {
@@ -295,9 +309,9 @@
         }
 
         .sidebar--bg {
-            position: fixed;
+            position: absolute;
             top: 0;
-            left: 0;
+            right: 0;
             width: 215px;
             background: #3f6592;
             height: 100%;
@@ -305,39 +319,13 @@
         }
 
         .sidebar {
-            left: 0;
-            position: fixed;
+            right: 0;
+            position: absolute;
             z-index: 1;
             color: #fff;
-            padding: 25px 0 0 14px;
+            padding: 25px 14px 0 14px;
             width: 215px;
             height: auto;
-        }
-
-        .avatar--bg {
-            left: -10px;
-            top: -70px;
-            position: fixed;
-            z-index: 0;
-            margin: 0;
-            padding: 0;
-            background: #a43d47;
-            width: 225px;
-            height: 270px;
-            display: none;
-        }
-
-        .avatar {
-            position: relative;
-            display: inline-block;
-            z-index: 2;
-            padding: 0;
-            margin: 0 0 0 9px;
-            height: 155px;
-            width: 155px;
-            border-radius: 50%;
-            background-size: cover !important;
-            border: 2px solid #fff;
         }
 
         .sidebar--data {
@@ -443,17 +431,21 @@
         }
 
         @media print {
-            body {
-                width: 100%;
+            .wrapper {
+                max-width: 100%;
             }
 
             .sidebar--bg {
                 position: absolute;
+                right: 0;
+                left: auto;
                 height: 100%;
             }
 
             .sidebar {
                 position: absolute;
+                right: 0;
+                left: auto;
             }
         }
     </style>
@@ -461,15 +453,10 @@
 
 <body>
 
+    <div class="wrapper">
     <div class="sidebar--bg"></div>
 
     <aside class="sidebar">
-
-        <div class="avatar--bg"></div>
-        <div class="avatar"
-            style="background:url('https://cvmaker-storage.s3.eu-west-3.amazonaws.com/img/avatar/e9f195130fec4978850226d18cb0dbee72844dd6.jpg') no-repeat;">
-        </div>
-
         <div class="sidebar--data">
             <h2 class="sidebar--title">
                 <span>Personal</span>
@@ -645,13 +632,14 @@
 
         <div class="section--name">
             <h1>Pedro Lucena</h1>
+            <p class="section--role">Senior Full-Stack Developer | TypeScript | React | Node.js</p>
         </div>
 
         <div class="section">
             <div class="section section--summary">
                 <div class="section--content">
-                    <p><strong>Full-Stack Developer</strong> specializing in type-safe <strong>TypeScript</strong> architectures.
-                        <strong>4 years</strong> building scalable <strong>fintech</strong> and <strong>e-commerce</strong> applications
+                    <p><strong>Senior Full-Stack Developer</strong> specializing in type-safe <strong>TypeScript</strong> architectures.
+                        <strong>4+ years</strong> building scalable <strong>fintech</strong> and <strong>e-commerce</strong> applications
                         across international teams. Currently architecting monorepo systems in Switzerland with <strong>React 19</strong>,
                         <strong>Next.js 15</strong>, and <strong>tRPC</strong>.
                     </p>
@@ -870,6 +858,8 @@
         </div>
 
     </section>
+
+    </div>
 
 </body>
 
